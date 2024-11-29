@@ -1,0 +1,7 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="360" height="360" fill="white"/>
+<rect width="32" height="96" transform="matrix(-1 0 0 -1 360 360)" fill="#FF97BD"/>
+<rect width="32" height="64" transform="matrix(-1 0 0 -1 328 360)" fill="#FF97BD"/>
+<rect width="32" height="32" transform="matrix(-1 0 0 -1 296 360)" fill="#FF97BD"/>
+<path d="M260 140L188.24 185.6C185.77 187.147 182.915 187.968 180 187.968C177.085 187.968 174.23 187.147 171.76 185.6L100 140M116 116H244C252.837 116 260 123.163 260 132V228C260 236.837 252.837 244 244 244H116C107.163 244 100 236.837 100 228V132C100 123.163 107.163 116 116 116Z" stroke="#FF97BD" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

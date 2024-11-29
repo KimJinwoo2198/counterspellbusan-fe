@@ -1,0 +1,748 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "retro";
+  font-weight: 400;
+}
+:root {
+  --pink: #FF4186;
+  --blue: #41DDFF;
+
+  --pastel-blue: #8BEAFF;
+  --pastel-pink: #FF97BD;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100dvw;
+  overflow: hidden;
+  /* gap: 400px; */
+}
+article {
+  width: 100dvw;
+  overflow: hidden;
+}
+html, body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: #1C192D;
+}
+#introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  font-size: 2rem;
+  width: 100vw;
+  margin-top: 100px;
+  min-height: 100dvh;
+  > div {
+    min-height: 100vh;
+  }
+}
+#main-text {
+  > h1 {
+    text-transform: uppercase;
+    font-size: 160px;
+
+    transform: skew(-5deg) rotate(-1deg);
+    
+    /* glitch */
+    color: var(--pink);
+    font-family: SD Heululing;
+    font-weight: 400;
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(8px 8px 0px var(--blue));
+  }
+  div {
+    transform: skew(-5deg) rotate(-1deg);
+
+    display: flex;
+    align-items: end;
+    gap: 10px;
+  }
+  h2 {
+    
+    font-size: 96px;
+    font-family: "retro";
+    padding-left: 40px;
+    
+    /* glitch */
+    color: var(--pink);
+    filter: drop-shadow(4px 4px 0px var(--blue));
+  }
+  i {
+    font-size: 64px;
+    color: var(--blue);
+    filter: drop-shadow(0);
+    font-family: "retro";
+
+  }
+}
+#test-ghost {
+  width: 400px;
+}
+
+#arrow {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+#background-lottie {
+  position: absolute;
+  top: 0;
+  opacity: 0.2;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+  outline: none;
+  object-fit: contain;
+  min-width: calc(100vh * 20);
+}
+
+#event-details {
+  margin-top: 20px;
+  padding-left: 40px;
+  font-family: "pp";
+  > b {
+    font-family: "pp";
+    color: var(--blue);
+  }
+}
+
+#btns {
+  padding-top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+  margin-top: 20px;
+  > img {
+    width: 100px;
+  }
+  > [id^="ghost"] {
+    position: absolute;
+
+    &:first-child {
+      left: 0;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+  > div {
+    display: flex;
+    gap: 40px;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+    padding: 20px 56px;
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 9999px;
+    position: relative;
+    text-transform: upperca ;
+
+
+    &::before{
+      content: "";
+      position: absolute;
+      margin-top: -100px;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+    }
+
+    &:first-child {
+      background-color: var(--pink);
+      &::before {
+        right: 40px;
+        background-image: url("assets/alien-2.svg");
+      }
+    }
+    &:last-child {
+      background-color: var(--blue);
+      &::before {
+        left: 40px;
+        background-image: url("assets/alien-1.svg");
+      }
+    }
+  }
+}
+
+#count-down {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 400px;
+
+  background-image: url("background/timer.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > h1 {
+    position: relative;
+    font-size: 64px;
+    text-transform: uppercase;
+
+    font-family: "retro";
+    color: var(--pink);
+    text-shadow: 4px 4px 0px var(--blue);
+    &::before{
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      left: calc(-84px - 40px);
+      bottom: 10px;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-1.svg");
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      right: calc(-84px - 40px);
+      bottom: 10px;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-2.svg");
+    }
+  }
+}
+#timer {
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  > p {
+
+  font-size: 160px;
+  color: var(--pink);
+  }
+}
+.timer-item {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "ws-bold";
+  color: var(--blue);
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  span {
+    font-size: 160px;
+    color: var(--pink);
+  }
+  p {
+    font-size: 20px;
+    font-family: "ws-medium";
+    color: var(--blue);
+  }
+}
+
+#info {
+  min-height: 100dvh;
+  background: linear-gradient(180deg, rgba(255, 151, 189, 0.00) 0%, #FF97BD 23.98%);
+  color: #fff;
+  > div {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100%;
+    background-image: url("background/info.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    color: #FFF;
+    font-size: 80px;
+
+    font-family: "retro";
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(4px 4px 0px var(--pastel-blue));
+
+    font-family: "retro";
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -3.2px;
+  }
+  h2 {
+    color: #FFF;
+    font-size: 100px;
+
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(6px 6px 0px var(--pastel-blue));
+    font-family: "retro";
+  }
+  p {
+    margin-top: 40px;
+    color: rgba(28, 25, 45, 0.70);
+    font-family: "ws-regular";
+    text-align: center  ;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -2.4px;
+    > b {
+      font-family: "ws-bold";
+    }
+  }
+}
+
+
+#guild {
+  min-height: 100dvh;
+  background: linear-gradient(180deg, #8BEAFF 93.6%, rgba(139, 234, 255, 0.00) 100%);
+  color: #fff;
+  > div:first-child {
+    padding-top: 200px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100%;
+    background-image: url("background/guild.svg");
+    background-position: top;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 436.36px;
+      background-position: 0;
+      left: -200px;
+      bottom: -400px;
+      /* background-size: 480px 436.36px; */
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-3.svg");
+      z-index: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 436.36px;
+      background-position: 0;
+      right: -200px;
+      top: 200px;
+      /* background-size: 480px 436.36px; */
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-4.svg");
+      z-index: 0;
+    }
+  }
+
+  > div:last-child {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 200px;
+  }
+
+
+  h1 {
+    color: #FFF;
+    font-size: 80px;
+
+    font-family: "retro";
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(4px 4px 0px var(--pastel-pink));
+
+    font-family: "retro";
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -3.2px;
+  }
+  h2 {
+    color: #FFF;
+    font-size: 100px;
+
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(6px 6px 0px var(--pastel-pink));
+    font-family: "retro";
+  }
+  p {
+    margin-top: 40px;
+    color: rgba(28, 25, 45, 0.70);
+    font-family: "ws-regular";
+    text-align: center  ;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -2.4px;
+    > b {
+      font-family: "ws-bold";
+    }
+  }
+}
+#fqa {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: 0 40px; */
+  background-color: #101012;
+  background-image: url("background/fqa.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: 0 0;
+  > h1 {
+    padding-top: 120px;
+
+    position: relative;
+    font-size: 140px;
+    font-family: "retro";
+    letter-spacing: 2.8px;
+    margin: 40px 0;
+
+    color: var(--pink);
+    font-family: "retro";
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 4px 4px 0px var(--blue);
+
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      left: calc(-84px - 40px);
+      bottom: 32px;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-1.svg");
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      right: calc(-84px - 40px);
+      bottom: 32px;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-2.svg");
+    }
+  }
+  > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  > p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "ws-regular";
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 32px;
+
+  }
+}
+
+
+
+#sponsor {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: 0 40px; */
+  background-color: #1C192D;
+  background-image: url("background/sponsor.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: 0 0;
+  > h1 {
+    padding-top: 120px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 140px;
+    font-family: "retro";
+    letter-spacing: 2.8px;
+    margin: 80px 0;
+
+    color: var(--pink);
+    font-family: "retro";
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 4px 4px 0px var(--blue);
+
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      left: calc(-84px - 40px);
+      bottom: 32px;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-1.svg");
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 84px;
+      height: 60px;
+      background-position: 0;
+      right: calc(-84px - 40px);
+      bottom: 32px;
+      background-size: 84px 60px;
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-2.svg");
+    }
+  }
+  > div {
+    width: 100%;
+    background-color: #2F3D5D;
+    padding: 40px 0;
+  }
+  section {
+    background-image: url("assets/sponsor.png");
+    background-position: 0 10px;
+    background-repeat: repeat-x;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    height: 120px;
+
+    &:first-child { animation-name: sponsor }
+    &:last-child { animation-name: sponsor2 }
+  }
+}
+
+@keyframes sponsor {
+  0% {
+    background-position: 4089.67px 10px;
+  }
+  100% {
+    background-position: 0 10px;
+  }
+  
+}
+
+@keyframes sponsor2 {
+  0% {
+    background-position: 0 10px;
+  }
+  100% {
+    background-position: 4089.67px 10px;
+  }
+  
+}
+
+
+.fqaCard {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+  flex-direction: column;
+  background-color: #2F3D5D;
+  min-width: 300px;
+  max-width: 500px;
+  flex-grow: 1;
+  color: #fff;
+  padding: 20px 36px;
+  > h1 {
+    font-size: 32px;
+    font-family: "ws-semibold";
+  }
+  > p {
+    font-size: 24px;
+    font-family: "ws-regular";
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    background-image: url("assets/fqa.svg");
+    background-size: 48px 48px;
+  }
+}
+
+
+
+#more-info {
+  margin-top: 200px;
+  min-height: 100dvh;
+  height: 1240px;
+  background: linear-gradient(180deg, rgba(255, 151, 189, 0.00) 0%, #FF97BD 23.98%);
+  color: #fff;
+  > div {
+    padding-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 871.36px;
+      background-position: 0;
+      left: -200px;
+      /* left: -200px;
+      bottom: -400px; */
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-5.svg");
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 614px;
+      height: 891px;
+      background-position: 0;
+      right: -200px;
+      /* left: -200px;
+      bottom: -400px; */
+      background-repeat: no-repeat;
+      background-image: url("assets/alien-6.svg");
+      z-index: 0;
+    }
+  }
+
+  h1 {
+    color: #FFF;
+    font-size: 80px;
+
+    font-family: "retro";
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(4px 4px 0px var(--pastel-blue));
+
+    font-family: "retro";
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -3.2px;
+  }
+  h2 {
+    color: #FFF;
+    font-size: 100px;
+
+    -webkit-text-stroke: 1px #000;
+    filter: drop-shadow(6px 6px 0px var(--pastel-blue));
+    font-family: "retro";
+  }
+  section {
+    display: flex;
+    position: relative;
+    gap: 40px;
+    margin-top: 80px;
+    path {
+      transition: all .5s;
+    }
+    svg:hover {
+      path {
+        stroke: var(--pastel-blue);
+      }
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-transform: uppercase;
+      font-size: 32px;
+    }
+  }
+}
+
+
+
+
+
+
+
+@font-face {
+  src: url("fonts/pp.otf");
+  font-family: "pp";
+}
+
+@font-face {
+  src: url("fonts/retro.ttf");
+  font-family: "retro";
+}
+
+@font-face {
+  src: url("fonts/ws-bold.otf");
+  font-family: "ws-bold";
+}
+
+@font-face {
+  src: url("fonts/ws-extrablack.otf");
+  font-family: "ws-extrablack";
+}
+
+@font-face {
+  src: url("fonts/ws-extrabold.otf");
+  font-family: "ws-extrabold";
+}
+
+@font-face {
+  src: url("fonts/ws-medium.otf");
+  font-family: "ws-medium";
+}
+
+@font-face {
+  src: url("fonts/ws-regular.otf");
+  font-family: "ws-regular";
+}
+
+@font-face {
+  src: url("fonts/ws-semibold.otf");
+  font-family: "ws-semibold";
+}
